@@ -1,0 +1,6 @@
+{
+  "name": "Infinity Web+",
+  "description": "A feature-rich, high-speed mobile browser with built-in AI assistant, smart search, multiple tabs, ad blocker, customizable quick access, and a personalized news feed, styled like UC Browser.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

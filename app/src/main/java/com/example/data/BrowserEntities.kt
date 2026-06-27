@@ -1,0 +1,42 @@
+package com.example.data
+
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "history")
+data class HistoryItem(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val url: String,
+    val title: String,
+    val timestamp: Long = System.currentTimeMillis()
+)
+
+@Entity(tableName = "bookmarks")
+data class BookmarkItem(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val url: String,
+    val title: String,
+    val timestamp: Long = System.currentTimeMillis()
+)
+
+@Entity(tableName = "downloads")
+data class DownloadItem(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val url: String,
+    val fileName: String,
+    val filePath: String,
+    val fileSize: Long,
+    val progress: Int, // 0 to 100
+    val status: String, // "DOWNLOADING", "COMPLETED", "FAILED"
+    val timestamp: Long = System.currentTimeMillis()
+)
+
+@Entity(tableName = "tabs")
+data class TabItem(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val url: String,
+    val title: String,
+    val isIncognito: Boolean = false,
+    val isActive: Boolean = false,
+    val timestamp: Long = System.currentTimeMillis()
+)
